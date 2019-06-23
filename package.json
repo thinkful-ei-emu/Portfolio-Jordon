@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Jordon Carter",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0"
+  }
+}

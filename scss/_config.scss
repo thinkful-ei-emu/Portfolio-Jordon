@@ -1,0 +1,49 @@
+$primary-color: #444;
+$secondary-color: #edcc12;
+$show-home-image: true;
+$home-image: url(../img/macbook-pro-black-screen.jpg);
+$background-opasity: 0.9;
+$secondaryImg: url(../img/circuit-board-circuits-components-825258.jpg);
+
+@mixin easeOut {
+  transition: all 1s ease-out;
+}
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position-x: center;
+    }
+  }
+}
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+//media query mixing
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
